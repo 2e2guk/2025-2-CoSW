@@ -175,5 +175,10 @@ EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
+# 경찰청 API
 POLICE_API_BASE = os.environ.get("POLICE_API_BASE")
-POLICE_API_KEY = os.environ.get("POLICE_API_KEY")
+POLICE_API_KEY  = os.environ.get("POLICE_API_KEY")
+
+# 미디어 설정
+MEDIA_URL = "/uploads/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "uploads")
