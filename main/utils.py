@@ -31,7 +31,7 @@ def ai_infer(description, top_k=4):
             AI_INFER_URL,
             json=payload,
             headers={"Content-Type": "application/json"},
-            timeout=10,
+            timeout=60,
         )
         print("🔥 [infer raw]", res.text)
         res.raise_for_status()
