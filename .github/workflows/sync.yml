@@ -1,0 +1,54 @@
+name: Police Sync & Match Cron
+
+on:
+  schedule:
+    - cron: '0 * * * *' # 1시간마다 실행
+  workflow_dispatch:
+    inputs:
+      days:
+        description: '기간(일)'
+        default: '7'
+
+jobs:
+  run-cron-jobs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - run: pip install -r requirements.txt
+      
+      - name: Run Sync -> Wait -> Match
+        env:
+          POLICE_API_KEY: ${{ secrets.POLICE_API_KEY }}
+          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_NAME: ${{ secrets.DB_NAME }}
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          DB_PORT: ${{ secrets.DB_PORT }}
+          DJANGO_SECRET_KEY: ${{ secrets.DJANGO_SECRET_KEY }}
+          EMAIL_HOST_USER: ${{ secrets.EMAIL_HOST_USER }}
+          EMAIL_HOST_PASSWORD: ${{ secrets.EMAIL_HOST_PASSWORD }}
+        run: |
+          python manage.py migrate
+          
+          INPUT_DAYS="${{ github.event.inputs.days }}"
+          if [ -z "$INPUT_DAYS" ]; then
+            DAYS=1
+            echo " [Hourly Cron] 최근 1일 데이터 갱신"
+          else
+            DAYS=$INPUT_DAYS
+            echo " [Manual Trigger] 최근 $DAYS일 데이터 갱신"
+          fi
+          
+          # 1. 데이터 동기화
+          python manage.py sync_police --days $DAYS
+          
+          # 2. AI 인덱싱 대기 (60초)
+          echo " AI 서버 인덱싱 대기 중 (60초)..."
+          sleep 60
+          
+          # 3. 매칭 및 이메일 발송
+          echo " 매칭 시작"
+          python manage.py match_daily
