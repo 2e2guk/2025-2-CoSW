@@ -1,9 +1,6 @@
 name: Police Sync & Match Cron
 
 on:
-  push:
-    branches:
-      - 'backend'
   schedule:
     - cron: '0 * * * *' # 1시간마다 실행
   workflow_dispatch:
