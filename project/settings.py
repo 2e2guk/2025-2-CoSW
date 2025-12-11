@@ -179,3 +179,9 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 POLICE_API_BASE = os.environ.get("POLICE_API_BASE")
 POLICE_API_KEY  = os.environ.get("POLICE_API_KEY")
+
+# 미디어 설정
+import os
+
+MEDIA_URL = '/uploads/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')

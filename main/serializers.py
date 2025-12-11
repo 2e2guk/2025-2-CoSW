@@ -27,3 +27,20 @@ class UserLostItemListSerializer(serializers.ModelSerializer):
             "is_active",
             "created_at",
         ]
+
+    def get_original_image_url(self, obj):
+        url = obj.original_image_url
+        if not url:
+            return None
+
+        # 이미 http URL이면 그대로 반환
+        if url.startswith("http://") or url.startswith("https://"):
+            return url
+
+        # request 객체 가져오기
+        request = self.context.get("request")
+        if not request:
+            return url  # fallback (거의 발생 X)
+
+        # 상대경로 → 절대경로 변환
+        return request.build_absolute_uri(url)

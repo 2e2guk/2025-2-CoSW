@@ -10,7 +10,7 @@ AI_BASE = "https://jzybnzxdkntxgmhx.tunnel.elice.io/api/v1"
 AI_SYNC_URL = f"{AI_BASE}/index/refresh"
 
 
-def ai_infer(description, top_k=3):
+def ai_infer(description, top_k=4):
     """
     /pipeline/infer 는 즉시 결과(top 리스트)를 반환
     Django에서는 이 결과를 그대로 formatted matches 로 변환
