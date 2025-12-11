@@ -146,9 +146,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # 1. DRF 설정
 REST_FRAMEWORK = {
-    "DEFAULT_AUTHENTICATION_CLASSES": (
-        "main.auth.UsersJWTAuthentication",
-    ),
+    "DEFAULT_AUTHENTICATION_CLASSES": ("main.auth.UsersJWTAuthentication",),
     "DEFAULT_RENDERER_CLASSES": [
         "rest_framework.renderers.JSONRenderer",
     ],
@@ -178,4 +176,4 @@ EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 POLICE_API_BASE = os.environ.get("POLICE_API_BASE")
-POLICE_API_KEY  = os.environ.get("POLICE_API_KEY")
+POLICE_API_KEY = os.environ.get("POLICE_API_KEY")
