@@ -1,4 +1,3 @@
-# main/management/commands/match_daily.py
 from django.core.management.base import BaseCommand
 from django.core.mail import send_mail
 from main.models import UserLostItem, NotificationLog
@@ -13,7 +12,7 @@ class Command(BaseCommand):
         active_requests = UserLostItem.objects.filter(is_active=True)
 
         if not active_requests.exists():
-            self.stdout.write("   -> 활성화된 요청이 없습니다.")
+            self.stdout.write("   -> 활성화된 요청이 없습니다.")
             return
 
         sent_count = 0
@@ -38,6 +37,7 @@ class Command(BaseCommand):
                     ).exists():
                         continue
 
+                    # 신규 매칭 리스트에 추가 (상세 정보 포함)
                     new_matches.append(
                         {
                             "id": match_id,
@@ -90,7 +90,7 @@ class Command(BaseCommand):
                             is_sent=True,
                         )
 
-                    self.stdout.write(f"   -> 📧 Sent to {lost_req.user.email}")
+                    self.stdout.write(f"   -> 📧 Sent to {lost_req.user.email}")
                     sent_count += 1
 
             except Exception as e:

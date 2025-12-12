@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>경찰청 유실물 챗봇</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="chat_window.css">
+    <link href="https://fonts.googleapis.com/css2?family=Malgun+Gothic&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div id="chatbot-container">
+
+        <div id="chatbot-header">
+            <img id="header-icon" src="./header_logo.png" alt="챗봇 로고">
+            <div id="header-text-wrapper">
+                <div id="header-text-group">
+                    <span id="header-title">경찰청 유실물 챗봇</span>
+                    <span id="header-subtitle">LOST112</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="chatbot-messages"></div>
+        <div id="image-preview-box" style="display:none;"></div>
+
+        <div id="action-bar">
+            <button class="action-btn" id="open-list">내 분실물 목록</button>
+            <button class="action-btn" id="open-help">도움말</button>
+        </div>
+
+
+        <div id="chatbot-input-area">
+            <input type="text" id="chat-input" placeholder="메시지 입력..." />
+            <button id="attach-button">📎</button>
+            <input type="file" id="image-input" accept="image/*" style="display:none;">
+            <button id="chat-send">▶</button>
+        </div>
+
+    </div> <!-- chatbot-container 끝 -->
+
+    <script src="chat_window.js"></script> 
+</body>
+</html>
