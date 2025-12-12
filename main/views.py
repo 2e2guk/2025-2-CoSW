@@ -77,11 +77,13 @@ class LostItemCreateView(APIView):
         # --- 프론트에서 필요한 형태로 변환 ---
         formatted = []
         for item in ai_results[:3]:
+            preview = item.get("preview", {})
+
             formatted.append({
-                "title": item.get("fdPrdtNm"),
-                "image": item.get("fdFilePathImg"),
-                "place": item.get("depPlace"),
-                "date": item.get("fdYmd"),
+                "title": preview.get("fdPrdtNm"),
+                "image": preview.get("fdFilePathImg"),
+                "place": preview.get("depPlace"),
+                "date": preview.get("fdYmd"),
                 "detail_link": f"https://www.lost112.go.kr/find/findDetail.do?atcId={item.get('atcId')}",
                 "score": item.get("score"),
             })
