@@ -1,0 +1,395 @@
+{
+  "add_bos_token": false,
+  "add_eos_token": false,
+  "add_prefix_space": false,
+  "added_tokens_decoder": {
+    "0": {
+      "content": "<|endoftext|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "1": {
+      "content": "<|pad|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2": {
+      "content": "<|unk|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "3": {
+      "content": "<|sep|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "4": {
+      "content": "<|mask|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "5": {
+      "content": "<|cls|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "6": {
+      "content": "<|image|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "7": {
+      "content": "<|audio|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "8": {
+      "content": "<|user|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "9": {
+      "content": "<|system|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "10": {
+      "content": "<|assistant|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "11": {
+      "content": "<|extra_id_0|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "12": {
+      "content": "<|extra_id_1|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "13": {
+      "content": "<|extra_id_2|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "14": {
+      "content": "<|extra_id_3|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "15": {
+      "content": "<|extra_id_4|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "16": {
+      "content": "<|extra_id_5|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "17": {
+      "content": "<|extra_id_6|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "18": {
+      "content": "<|extra_id_7|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "19": {
+      "content": "<|extra_id_8|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "20": {
+      "content": "<|extra_id_9|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "21": {
+      "content": "<|extra_id_10|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "22": {
+      "content": "<|extra_id_11|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "23": {
+      "content": "<|extra_id_12|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "24": {
+      "content": "<|extra_id_13|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "25": {
+      "content": "<|im_start|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "26": {
+      "content": "<|im_sep|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "27": {
+      "content": "<|im_end|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "28": {
+      "content": "<|resident_reg|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "29": {
+      "content": "<|foreigner_reg|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "30": {
+      "content": "<|business_reg|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "31": {
+      "content": "<|credit_card|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "32": {
+      "content": "<|passport|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "33": {
+      "content": "<|driver_license|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "34": {
+      "content": "<|telephone|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "35": {
+      "content": "<|health_insurance|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "36": {
+      "content": "<|bank_account|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "37": {
+      "content": "</tool_output>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "38": {
+      "content": "<tool_output>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "39": {
+      "content": "</tool_call>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "40": {
+      "content": "<tool_call>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    }
+  },
+  "additional_special_tokens": [
+    "<|endoftext|>",
+    "<|pad|>",
+    "<|unk|>",
+    "<|sep|>",
+    "<|mask|>",
+    "<|cls|>",
+    "<|image|>",
+    "<|audio|>",
+    "<|user|>",
+    "<|system|>",
+    "<|assistant|>",
+    "<|extra_id_0|>",
+    "<|extra_id_1|>",
+    "<|extra_id_2|>",
+    "<|extra_id_3|>",
+    "<|extra_id_4|>",
+    "<|extra_id_5|>",
+    "<|extra_id_6|>",
+    "<|extra_id_7|>",
+    "<|extra_id_8|>",
+    "<|extra_id_9|>",
+    "<|extra_id_10|>",
+    "<|extra_id_11|>",
+    "<|extra_id_12|>",
+    "<|extra_id_13|>",
+    "<|im_start|>",
+    "<|im_sep|>",
+    "<|im_end|>",
+    "<|resident_reg|>",
+    "<|foreigner_reg|>",
+    "<|business_reg|>",
+    "<|credit_card|>",
+    "<|passport|>",
+    "<|driver_license|>",
+    "<|telephone|>",
+    "<|health_insurance|>",
+    "<|bank_account|>"
+  ],
+  "bos_token": "<|endoftext|>",
+  "chat_template": "{%- if tools is iterable and tools | length > 0 %}\n                {{- '<|im_start|><|system|>'}}\n                {{- '당신은 도구 호출 기능을 갖춘 유용한 도우미입니다. 사용자의 요청을 처리하기 위해서 필요한 도구가 주어진 목록에 있는 경우 도구 호출로 응답하세요.\n필요한 도구가 목록에 없는 경우에는 도구 호출 없이 사용자가 요구한 정보를 제공하세요.\n필요한 도구가 목록에 있지만 해당 도구를 호출하는데 필요한 argument 정보가 부족한 경우 해당 정보를 사용자에게 요청하세요.\n사용자의 요청을 처리하기 위해 여러번 도구를 호출할 수 있어야 합니다.\n도구 호출 이후 도구 실행 결과를 입력으로 받으면 해당 결과를 활용하여 답변을 생성하세요.\n\n다음은 접근할 수 있는 도구들의 목록 입니다:\n<tools>\n'}}\n                {%- for t in tools %}\n                    {{- t | tojson }}\n                    {{- '\n' }}\n                {%- endfor %}\n                {{- '</tools>' }}\n                {{- '\n\n도구를 호출하려면 아래의 JSON으로 응답하세요.\n도구 호출 형식: <tool_call>{\"name\": 도구 이름, \"arguments\": dictionary 형태의 도구 인자값}</tool_call>' }}\n                \n                {%- if messages[0].role == 'system' %}\n                    {{- '\n\n' + messages[0].content}}\n                    {% set dummy = messages.pop(0) %}\n                {%- endif %}  \n                {{- '<|im_end|>' }}\n            {%- endif %}\n    \n            {%- for message in messages %}\n                {%- if message.role == 'system' %}\n                    {{- '<|im_start|><|system|>' + message.content + '<|im_end|>'}}\n                {%- elif message.role == 'user' %}\n                    {{- '<|im_start|><|user|>' + message.content + '<|im_end|>'}}\n                {%- elif message.role == 'assistant' %}\n                    {{- '<|im_start|><|assistant|>'}}\n                    {%- if message.content is defined %}\n                        {{- message.content}}\n                    {%- endif %}\n                    {%- if message.tool_calls is defined %}\n                        {%- for tool_call in message.tool_calls %}\n                            {%- if tool_call.function is defined %}\n                                {%- set tool_call = tool_call.function %}\n                            {%- endif %}\n                            {{- '<tool_call>' }}\n                            {{- '{' }}\n                            {{- '\"name\": \"' }}\n                            {{- tool_call.name }}\n                            {{- '\"' }}\n                            {%- if tool_call.arguments is defined %}\n                                {{- ', ' }}\n                                {{- '\"arguments\": ' }}\n                                {{- tool_call.arguments|tojson }}\n                            {%- endif %}\n                            {{- '}' }}\n                            {{- '</tool_call>' }}\n                        {%- endfor %}\n                    {%- endif %}\n                    {{- '<|im_end|>'}}\n    \n                {%- elif message.role == 'tool' %}\n                    {{- '<|im_start|><|extra_id_13|><tool_output>' + message.content + '</tool_output><|im_end|>'}}\n                {%- endif %}\n            {%- endfor %}\n            {%- if add_generation_prompt %}\n                {{- '<|im_start|><|assistant|>'}}\n            {%- endif %}",
+  "clean_up_tokenization_spaces": true,
+  "auto_map": {
+"AutoProcessor":  "processing_ax4vl.AX4VLProcessor"
+  },
+  "cls_token": "<|cls|>",
+  "eod_token": "<|endoftext|>",
+  "eos_token": "<|im_end|>",
+  "errors": "replace",
+  "extra_special_tokens": {},
+  "mask_token": "<|mask|>",
+  "model_max_length": 8192,
+  "pad_token": "<|pad|>",
+  "padding_side": "right",
+  "processor_class": "AX4VLProcessor",
+  "sep_token": "<|sep|>",
+  "tokenizer_class": "GPT2Tokenizer",
+  "truncation_side": "left",
+  "unk_token": "<|unk|>",
+  "vocab_size": 102400
+}
