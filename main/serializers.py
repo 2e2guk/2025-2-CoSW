@@ -18,6 +18,8 @@ class LostItemCreateSerializer(serializers.Serializer):
     
 
 class UserLostItemListSerializer(serializers.ModelSerializer):
+    # original_image_url을 메서드 기반 필드로 노출하여 절대 URL 변환 결과를 응답에 포함
+    original_image_url = serializers.SerializerMethodField()
     class Meta:
         model = UserLostItem
         fields = [

@@ -51,7 +51,7 @@ class Command(BaseCommand):
         while True:
             self.stdout.write(
                 self.style.NOTICE(
-                    f"  >> Page {page_no} 요청 중... ({start_date} ~ {today})"
+                    f"  >> Page {page_no} 요청 중... ({start_date} ~ {today})"
                 )
             )
 
@@ -84,12 +84,12 @@ class Command(BaseCommand):
 
                     items_wrapper = body.get("items")
                     if not items_wrapper:
-                        self.stdout.write("      -> 해당 페이지에 데이터가 없습니다.")
+                        self.stdout.write("      -> 해당 페이지에 데이터가 없습니다.")
                         break
 
                     items_list = items_wrapper.get("item")
                 except Exception as e:
-                    self.stdout.write(self.style.ERROR(f"      -> XML 파싱 실패: {e}"))
+                    self.stdout.write(self.style.ERROR(f"      -> XML 파싱 실패: {e}"))
                     break
 
                 if isinstance(items_list, dict):
@@ -99,7 +99,7 @@ class Command(BaseCommand):
 
                 # -----------------------
                 # 2) 기존 데이터 조회
-                #    (같은 atc_id + fd_sn 의 기존 레코드를 미리 가져와서 map 구성)
+                #    (같은 atc_id + fd_sn 의 기존 레코드를 미리 가져와서 map 구성)
                 # -----------------------
                 keys = []
                 for item in items_list:
@@ -201,7 +201,7 @@ class Command(BaseCommand):
                 total_updated += updated_count
 
                 self.stdout.write(
-                    f"      -> ➕ Bulk Insert {created_count}건, 🔁 Bulk Update {updated_count}건"
+                    f"      -> ➕ Bulk Insert {created_count}건, 🔁 Bulk Update {updated_count}건"
                 )
 
                 # 이 페이지의 아이템 수가 num_of_rows 보다 적으면 마지막 페이지
