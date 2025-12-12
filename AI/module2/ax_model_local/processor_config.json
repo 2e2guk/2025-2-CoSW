@@ -1,0 +1,9 @@
+{
+  "auto_map": {
+  "AutoProcessor":  "processing_ax4vl.AX4VLProcessor"
+  },
+  "image_token": "<|extra_id_11|>",
+  "num_tokens_per_tile": 144,
+  "patch_size": 16,
+  "processor_class": "AX4VLProcessor"
+}
