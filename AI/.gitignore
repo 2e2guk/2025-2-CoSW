@@ -1,0 +1,79 @@
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+__pycache__/
+*.pyc
+
+# Python env / build
+.venv/
+venv/
+.env
+dist/
+build/
+.eggs/
+*.egg-info/
+
+# Checkpoints / weights / large artifacts
+*.safetensors
+*.bin
+*.pt
+*.ckpt
+*.onnx
+*.tflite
+*.h5
+*.index.json
+*.tar
+*.tar.gz
+*.zip
+
+# Vector / numpy / cache
+*.faiss
+*.npy
+*.npz
+*.pkl
+*.cache/
+
+# Data & samples (원하면 test_image*.jpg만 허용)
+data/
+*.jpg
+*.jpeg
+*.png
+!test_image.jpg
+!test_image2.jpg
+
+# Local indices & metadata
+police_db.faiss
+police_db.meta.json
+police_meta.npy
+
+# Training logs
+logs/
+wandb/
+tensorboard/
+
+# === Weights / Artifacts / Big binaries ===
+checkpoints_VLM/
+checkpoints_vlm_rand/
+finetuned_koclip/
+police_db.faiss
+police_db.meta.json
+police_meta.npy
+vlm_env.tar.gz
+
+# model weight shards (AX4VL 등)
+module2/ax_model_local/*.safetensors
+module2/ax_model_local/*.bin
+module2/ax_model_local/*.pt
+module2/ax_model_local/model.safetensors.index.json
+
+# caches & misc big blobs
+**/__pycache__/
+*.pyc
+*.npz
+*.npy
+*.onnx
+*.tar
+*.zip
+# editor backups
+*.bak

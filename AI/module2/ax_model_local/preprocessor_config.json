@@ -1,0 +1,32 @@
+{
+  "auto_map": {
+  "AutoImageProcessor": "image_processing_ax4vl.AX4VLImageProcessor",
+  "AutoProcessor": "processing_ax4vl.AX4VLProcessor"
+  },
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_pad": false,
+  "do_rescale": true,
+  "do_resize": true,
+  "do_tile_pad": false,
+  "image_mean": [
+    0.5,
+    0.5,
+    0.5
+  ],
+  "image_processor_type": "AX4VLImageProcessor",
+  "image_std": [
+    0.5,
+    0.5,
+    0.5
+  ],
+  "max_num_tiles": 12,
+  "min_num_tiles": 1,
+  "processor_class": "AX4VLProcessor",
+  "resample": 2,
+  "rescale_factor": 0.00392156862745098,
+  "size": {
+    "shortest_edge": 384
+  },
+  "use_thumbnail": true
+}

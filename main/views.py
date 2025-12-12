@@ -6,6 +6,9 @@ from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.parsers import MultiPartParser, FormParser
 from .utils import *
+from django.conf import settings
+from django.core.files.storage import FileSystemStorage
+import os
 
 from .models import *
 from .serializers import *
@@ -55,7 +58,12 @@ class LostItemCreateView(APIView):
 
         image_url = None
         if image:
-            image_url = f"/uploads/{image.name}"
+            # MEDIA_ROOT 보장 및 안전한 파일 저장
+            os.makedirs(settings.MEDIA_ROOT, exist_ok=True)
+            fs = FileSystemStorage(location=settings.MEDIA_ROOT, base_url=settings.MEDIA_URL)
+            filename = fs.get_available_name(image.name)
+            saved_path = fs.save(filename, image)
+            image_url = fs.url(saved_path)  # '/uploads/<filename>' 형태
 
         lost_item = UserLostItem.objects.create(
             user=request.user,
@@ -103,7 +111,7 @@ class ItemsListView(APIView):
     def get(self, request):
         user = request.user
         items = UserLostItem.objects.filter(user=user).order_by("-created_at")
-        serializer = UserLostItemListSerializer(items, many=True)
+        serializer = UserLostItemListSerializer(items, many=True, context={"request": request})
 
         return Response({"items": serializer.data}, status=200)
 
